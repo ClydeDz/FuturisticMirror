@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Futuristic Mirror</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/pie.css"/>
+    <link rel="stylesheet" href="style/pmg.css" />
+    <link rel="stylesheet" href="style/camera.css" />
+    <link rel="stylesheet" href="style/general.css" />
+</head>
+<body>
+    <div id="my_camera"></div>
+
+    <div id="mainMenu">
+        <p><b>Good afternoon Clyde</b></p>
+        <div>
+            Flight Status<br />
+            <p><i class="fa fa-plane"></i> Your flight ANZ-210 departs to Brisbane in 1 hour 30 minutes</p>
+            <p><i class="fa fa-arrow-circle-right"></i> To proceed to Gate 3, make a right from this screen.</p>
+        </div>
+    </div>
+    <div id="secondaryMenu" style="display:none;">
+        <!--<div class="weather">
+            <h3>Weather</h3>
+            <p>Current place:</p>
+            <div><i class="fa fa-tint" style="color:cornflowerblue;"></i> It's 12*c here in Auckland </div>
+            <p>Destination:</p>
+            <div><i class="fa fa-cloud" style="color:blue"></i> It's 15*c in Brisbane</div>
+        </div>-->
+        <!--<div class="toilet">
+            <h3>Toilets</h3>
+            <p>Toilets are located within 500m of this screen to your left. Here is a map to help you out.</p>
+            <div><img src="images/Arrive-AirportMap.jpg" height="200" width="250" /></div>
+        </div>-->
+        <!--<div class="assistance">
+            <h3>Help</h3>
+            <p>We are here to help you</p>
+            <div><i class="fa fa-wheelchair"></i> I need assistance</div>
+        </div>-->
+<!--<div class="food">
+<h3>Food</h3>
+<p>Find your favorite outlet here</p>
+<div><img src="images/mcdonalds-128.png" height="50" width="50" /><span style="position:relative;top:-15px;"> McDonalds</span></div>
+<div><img src="images/Starbucks_Coffee_Logo.svg.png" height="50" width="50" /><span style="position:relative;top:-15px;"> Starbucks Coffee</span></div>
+</div>-->
+        <!--<div class="shopping">
+            <h3>Shopping</h3>
+            <p><i class="fa fa-shopping-bag"></i> Find your favorite outlet here</p>
+            <div><img src="images/kathmandu.png" height="35" width="35" /><span style="position:relative;top:-15px;"> Kathmandu</span></div>
+            <div><img src="images/tissot.jpg" height="35" width="35" /><span style="position:relative;top:-15px;"> Tissot</span></div>
+            <div><img src="images/dutyfree.png" height="35" width="35" /><span style="position:relative;top:-15px;"> Duty Free Shop</span></div>
+        </div>-->
+    </div>
+    <!--<div id="roundMenu">
+        <ul id="menu">
+            <a class="menu-button fa fa-power-off" href="#menu" title="Show navigation"></a>
+            <a class="menu-button fa fa-times" href="#" title="Hide navigation"></a>
+            <li class="menu-item fa fa-plane"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-cutlery"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-wheelchair"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-male"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-info"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-cab"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-wifi"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-user"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-film"><a class="menu-item-back" href="#menu"></a></li>
+            <li class="menu-item fa fa-camera"><a class="menu-item-back" href="#menu"></a></li>
+        </ul>
+    </div>-->
+    <div id="wheelNavMenu">
+        <div id='piemenu' data-wheelnav
+             data-wheelnav-slicepath='DonutSlice'
+             data-wheelnav-spreader data-wheelnav-spreaderpath='PieSpreader'
+             data-wheelnav-marker data-wheelnav-markerpath='PieLineMarker'
+             data-wheelnav-rotateoff
+             data-wheelnav-navangle='270'
+             data-wheelnav-titleheight='45'
+             data-wheelnav-cssmode
+             data-wheelnav-init>
+            <div data-wheelnav-navitemimg='/images/icon-weather.png' onmouseup="displaySecondaryBlock('weather')"></div>
+            <div data-wheelnav-navitemimg='/images/icon-shopping.png' onmouseup="displaySecondaryBlock('shopping')"></div>
+            <div data-wheelnav-navitemimg='/images/icon-toilet.png' onmouseup="displaySecondaryBlock('toilet')"></div>
+            <div data-wheelnav-navitemimg='/images/icon-help.png' onmouseup="displaySecondaryBlock('help')"></div>
+            <div data-wheelnav-navitemimg='/images/icon-food.png' onmouseup="displaySecondaryBlock('food')"></div>
+        </div>
+    </div>
+
+
+
+    <!-- First, include the Webcam.js JavaScript Library -->
+    <script type="text/javascript" src="scripts/webcam.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+    <script src="scripts/raphael.min.js"></script>
+    <script src="scripts/raphael.icons.min.js"></script>
+    <script src="scripts/wheelnav.min.js"></script>
+    <script src="scripts/jquery.ui.touch-punch.js" type="text/javascript"></script>
+    <script src="scripts/pmg.js"></script>
+    <script src="scripts/pie.js"></script>
+    <script src="scripts/general.js"></script>
+    <script src="scripts/camera.js"></script>
+
+
+    <!-- Configure elements to make them draggable -->
+    <script>$('#mainMenu, #roundMenu, #wheelNavMenu, #secondaryMenu').draggable();</script>
+    
+    <!-- Configure a few settings and attach camera -->
+    <script language="JavaScript">
+        Webcam.set({
+            width: '100%',
+            height: '100%',
+            image_format: 'jpeg',
+            jpeg_quality: 100
+        });
+        Webcam.attach('#my_camera');
+    </script>
+
+    <!-- A button for taking snaps -->
+    <!--<form>
+        <input type=button value="Take HD Snapshot" onClick="take_snapshot()">
+    </form>-->
+
+    <!--<div id="results">Your captured image will appear here...</div>-->
+
+</body>
+</html>
